@@ -1,0 +1,14 @@
+{
+  "name": "ccbfde1b8f422d11",
+  "main": "ccbfde1b8f422d11@423.js",
+  "version": "423.0.0",
+  "homepage": "https://observablehq.com/d/ccbfde1b8f422d11",
+  "author": {
+    "name": "Dave Manning",
+    "url": "https://observablehq.com/@dave-manning"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
