@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODI Orchestrator: The Agentic Operating System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .chart-container { 
+            position: relative; 
+            width: 100%; 
+            max-width: 600px; 
+            margin-left: auto; 
+            margin-right: auto; 
+            height: 300px; 
+            max-height: 400px; 
+        } 
+        @media (min-width: 768px) { 
+            .chart-container { height: 350px; } 
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #4f46e5; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #4338ca; }
+    </style>
+    <!-- 
+        Palette: "Electric Future"
+        Primary: #1e1b4b (Deep Indigo)
+        Secondary: #4f46e5 (Electric Violet)
+        Accent: #06b6d4 (Cyan)
+        Highlight: #f43f5e (Rose)
+        Background: #f8fafc (Slate 50)
+    -->
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- HERO SECTION -->
+    <header class="bg-[#1e1b4b] text-white py-16 px-6 shadow-xl relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-cyan-400 via-violet-500 to-rose-500"></div>
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div>
+                <div class="inline-block px-3 py-1 bg-white/10 rounded-full text-cyan-300 text-sm font-semibold tracking-wide mb-4 border border-cyan-500/30">
+                    STRATEGIC ANALYSIS 2026-2027
+                </div>
+                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 tracking-tight">
+                    ODI Orchestrator <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-400">The Agentic Operating System</span>
+                </h1>
+                <p class="text-lg text-slate-300 mb-8 leading-relaxed max-w-xl">
+                    Bridging the gap between AI experimentation and enterprise transformation. A productized, auditable platform designed for the "Legacy Moment" of the Agentic Age.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <div class="px-6 py-3 bg-violet-600 rounded-lg shadow-lg font-bold flex items-center">
+                        <span class="text-2xl mr-2">80%</span> Business Transformation
+                    </div>
+                    <div class="px-6 py-3 bg-slate-800 rounded-lg shadow-lg font-bold flex items-center border border-slate-700">
+                        <span class="text-2xl mr-2 text-cyan-400">100%</span> Audit Trail
+                    </div>
+                </div>
+            </div>
+            <!-- Concept Graphic using HTML/CSS -->
+            <div class="hidden lg:flex justify-center items-center">
+                <div class="relative w-80 h-80">
+                    <div class="absolute inset-0 border-4 border-violet-500/30 rounded-full animate-pulse"></div>
+                    <div class="absolute inset-4 border-4 border-cyan-500/30 rounded-full"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl text-center shadow-2xl">
+                            <div class="text-4xl mb-2">🤖</div>
+                            <div class="font-bold text-white text-xl">Agentic AI</div>
+                            <div class="text-sm text-cyan-300 mt-1">Supervised & Audited</div>
+                        </div>
+                    </div>
+                    <!-- Orbiting Nodes -->
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-4 bg-rose-500 text-white text-xs font-bold px-2 py-1 rounded shadow-lg">Governance</div>
+                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-4 bg-cyan-600 text-white text-xs font-bold px-2 py-1 rounded shadow-lg">Ontology</div>
+                    <div class="absolute left-0 top-1/2 -translate-x-4 -translate-y-1/2 bg-violet-600 text-white text-xs font-bold px-2 py-1 rounded shadow-lg">Trust</div>
+                    <div class="absolute right-0 top-1/2 translate-x-4 -translate-y-1/2 bg-indigo-600 text-white text-xs font-bold px-2 py-1 rounded shadow-lg">Scale</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="max-w-6xl mx-auto px-6 py-12 space-y-16">
+
+        <!-- SECTION 1: THE MCKINSEY CHALLENGE -->
+        <section>
+            <div class="border-l-4 border-rose-500 pl-6 mb-8">
+                <h2 class="text-3xl font-bold text-slate-900 mb-2">The Legacy Moment</h2>
+                <p class="text-slate-600 text-lg">McKinsey's research indicates that AI adoption is facing a "Legacy Moment." The bottleneck isn't technology—it's organizational readiness. Leaders are failing to capture ROI because they treat AI as a tech upgrade rather than a business overhaul.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white rounded-2xl shadow-md p-8 border border-slate-100">
+                    <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center">
+                        <span class="w-8 h-8 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center mr-3 text-sm">01</span>
+                        The Transformation Gap
+                    </h3>
+                    <p class="text-slate-500 text-sm mb-6">
+                        According to McKinsey's Eric Kutcher, successful AI implementation is <strong>80% business transformation</strong> (process, culture, skills) and only <strong>20% technology</strong>. ODI focuses on the 80% that others miss.
+                    </p>
+                    <!-- CHART 1: DONUT -->
+                    <div class="chart-container">
+                        <canvas id="transformationChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-slate-900 to-indigo-900 rounded-2xl shadow-xl p-8 text-white relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+                    <h3 class="text-xl font-bold mb-6">Why ROI Fails</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="text-rose-400 mr-3 text-xl">⚠️</span>
+                            <div>
+                                <strong class="text-rose-200">Unmanaged "Black Boxes"</strong>
+                                <p class="text-slate-300 text-sm">Lack of audit trails creates "technical debt" and regulatory risk.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-rose-400 mr-3 text-xl">📉</span>
+                            <div>
+                                <strong class="text-rose-200">The Productivity J-Curve</strong>
+                                <p class="text-slate-300 text-sm">Without "intangible complements" like governance, productivity dips before it rises (Brynjolfsson).</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-rose-400 mr-3 text-xl">🧩</span>
+                            <div>
+                                <strong class="text-rose-200">Lack of Ontologies</strong>
+                                <p class="text-slate-300 text-sm">Without structured knowledge (Ide & Talamàs), agents suffer from drift and hallucination.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: STRATEGIC SWOT ANALYSIS -->
+        <section>
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-slate-900">Strategic Positioning</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto mt-2">Integrating insights from labor economics and knowledge hierarchies to position ODI as a market leader.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                <!-- Strength -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-cyan-500">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-bold text-slate-800">Strengths</h3>
+                        <span class="text-cyan-600 bg-cyan-50 px-2 py-1 rounded text-xs font-bold uppercase">Internal</span>
+                    </div>
+                    <ul class="space-y-3 text-sm text-slate-600">
+                        <li class="flex items-start"><span class="text-cyan-500 mr-2">✔</span> <strong>Auditability as Product:</strong> Turns compliance into a competitive advantage (Data Lineage Visualizer).</li>
+                        <li class="flex items-start"><span class="text-cyan-500 mr-2">✔</span> <strong>Ontological Grounding:</strong> Controlled vocabularies prevent drift.</li>
+                        <li class="flex items-start"><span class="text-cyan-500 mr-2">✔</span> <strong>Hybrid Workflows:</strong> Supports human-in-the-loop oversight.</li>
+                    </ul>
+                </div>
+                <!-- Weakness -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-rose-400">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-bold text-slate-800">Weaknesses</h3>
+                        <span class="text-rose-600 bg-rose-50 px-2 py-1 rounded text-xs font-bold uppercase">Internal</span>
+                    </div>
+                    <ul class="space-y-3 text-sm text-slate-600">
+                        <li class="flex items-start"><span class="text-rose-500 mr-2">✖</span> <strong>Onboarding Friction:</strong> "Mapping data sources" creates a TTV barrier (>2 weeks risk).</li>
+                        <li class="flex items-start"><span class="text-rose-500 mr-2">✖</span> <strong>Compute Dependency:</strong> Exposure to volatile inference costs (Ide & Talamàs).</li>
+                    </ul>
+                </div>
+                <!-- Opportunity -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-violet-500">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-bold text-slate-800">Opportunities</h3>
+                        <span class="text-violet-600 bg-violet-50 px-2 py-1 rounded text-xs font-bold uppercase">External</span>
+                    </div>
+                    <ul class="space-y-3 text-sm text-slate-600">
+                        <li class="flex items-start"><span class="text-violet-500 mr-2">🚀</span> <strong>Sovereign Stacks:</strong> "Bring Your Own Stack" fits regional AI trends.</li>
+                        <li class="flex items-start"><span class="text-violet-500 mr-2">🚀</span> <strong>Solver Marketplace:</strong> Scaling via "Ontology Packs" for verticals (Health, Finance).</li>
+                    </ul>
+                </div>
+                <!-- Threat -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-slate-500">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-bold text-slate-800">Threats</h3>
+                        <span class="text-slate-600 bg-slate-50 px-2 py-1 rounded text-xs font-bold uppercase">External</span>
+                    </div>
+                    <ul class="space-y-3 text-sm text-slate-600">
+                        <li class="flex items-start"><span class="text-slate-500 mr-2">⚠</span> <strong>Commoditization:</strong> Foundation models (OpenAI) adding native governance.</li>
+                        <li class="flex items-start"><span class="text-slate-500 mr-2">⚠</span> <strong>The "Basic AI" Trap:</strong> Routine automation causing cultural resistance (Brynjolfsson).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: ACCELERATING PRODUCTIVITY -->
+        <section class="bg-white rounded-3xl shadow-xl overflow-hidden border border-indigo-100">
+            <div class="grid grid-cols-1 lg:grid-cols-3">
+                <div class="bg-indigo-900 p-8 text-white lg:col-span-1 flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold mb-4">Flattening the J-Curve</h3>
+                    <p class="text-indigo-200 text-sm mb-6">
+                        Brynjolfsson argues that productivity initially dips when new tech is introduced due to the need for new processes. ODI provides these processes out-of-the-box, accelerating Time-to-Value (TTV).
+                    </p>
+                    <div class="bg-indigo-800/50 p-4 rounded-lg border border-indigo-700">
+                        <h4 class="font-bold text-cyan-400 mb-2">ODI Advantage</h4>
+                        <p class="text-xs text-white">By "baking in" auditability and ontology, ODI skips the "process invention" phase that stalls most enterprises.</p>
+                    </div>
+                </div>
+                <div class="p-8 lg:col-span-2">
+                    <h3 class="text-lg font-bold text-slate-800 mb-2">ROI Trajectory: Traditional vs. ODI Orchestrated</h3>
+                    <p class="text-xs text-slate-500 mb-6">Comparison of net value realization over time.</p>
+                    <!-- CHART 2: LINE CHART -->
+                    <div class="chart-container">
+                        <canvas id="productivityCurveChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: IMPLEMENTATION ROADMAP -->
+        <section>
+            <h2 class="text-3xl font-bold text-slate-900 mb-8 text-center">Implementation Roadmap (2026-2027)</h2>
+            
+            <!-- CSS Timeline -->
+            <div class="relative">
+                <!-- Vertical Line -->
+                <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-400 via-violet-500 to-indigo-600 rounded-full md:-ml-0.5"></div>
+
+                <!-- Phase 1 -->
+                <div class="relative mb-12">
+                    <div class="md:flex items-center justify-between">
+                        <div class="md:w-5/12 mb-4 md:mb-0 md:text-right md:pr-8 pl-12 md:pl-0">
+                            <span class="text-cyan-600 font-bold tracking-wider text-sm">Q3 2026</span>
+                            <h3 class="text-2xl font-bold text-slate-800">Phase 1: The Trust Magnet</h3>
+                            <p class="text-slate-600 text-sm mt-2">Diagnostic MVP focusing on "Agent Readiness Scores" and risk benchmarking. A freemium entry point to build trust.</p>
+                        </div>
+                        <div class="absolute left-0 md:left-1/2 w-8 h-8 bg-white border-4 border-cyan-500 rounded-full md:-ml-4 shadow-lg z-10 flex items-center justify-center">
+                            <span class="block w-2 h-2 bg-cyan-500 rounded-full"></span>
+                        </div>
+                        <div class="md:w-5/12 md:pl-8 pl-12">
+                            <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                                <h4 class="font-bold text-xs uppercase text-slate-400 mb-2">Phase 1 Success Metrics</h4>
+                                <!-- Small Bar Chart concept embedded via HTML structure for variety -->
+                                <div class="space-y-2">
+                                    <div>
+                                        <div class="flex justify-between text-xs font-bold mb-1"><span>Scenario Completion</span> <span>>80%</span></div>
+                                        <div class="w-full bg-slate-100 rounded-full h-2"><div class="bg-cyan-500 h-2 rounded-full" style="width: 80%"></div></div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between text-xs font-bold mb-1"><span>Qualified Leads</span> <span>High</span></div>
+                                        <div class="w-full bg-slate-100 rounded-full h-2"><div class="bg-cyan-400 h-2 rounded-full" style="width: 65%"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="relative mb-12">
+                    <div class="md:flex items-center justify-between flex-row-reverse">
+                        <div class="md:w-5/12 mb-4 md:mb-0 md:text-left md:pl-8 pl-12">
+                            <span class="text-violet-600 font-bold tracking-wider text-sm">Q1 2027</span>
+                            <h3 class="text-2xl font-bold text-slate-800">Phase 2: The Starter Kit</h3>
+                            <p class="text-slate-600 text-sm mt-2">Enablement phase deploying Data Lineage Visualizer and Agent Supervisor Modules. Moving from diagnosis to active governance.</p>
+                        </div>
+                        <div class="absolute left-0 md:left-1/2 w-8 h-8 bg-white border-4 border-violet-500 rounded-full md:-ml-4 shadow-lg z-10 flex items-center justify-center">
+                            <span class="block w-2 h-2 bg-violet-500 rounded-full"></span>
+                        </div>
+                        <div class="md:w-5/12 md:pr-8 pl-12 md:pl-0">
+                            <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                                <h4 class="font-bold text-xs uppercase text-slate-400 mb-2">Phase 2 Success Metrics</h4>
+                                <div class="space-y-2">
+                                    <div>
+                                        <div class="flex justify-between text-xs font-bold mb-1"><span>Supervision Adoption</span> <span>>70%</span></div>
+                                        <div class="w-full bg-slate-100 rounded-full h-2"><div class="bg-violet-500 h-2 rounded-full" style="width: 70%"></div></div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between text-xs font-bold mb-1"><span>Ontology Usage</span> <span>Growing</span></div>
+                                        <div class="w-full bg-slate-100 rounded-full h-2"><div class="bg-violet-400 h-2 rounded-full" style="width: 50%"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="relative">
+                    <div class="md:flex items-center justify-between">
+                        <div class="md:w-5/12 mb-4 md:mb-0 md:text-right md:pr-8 pl-12 md:pl-0">
+                            <span class="text-indigo-600 font-bold tracking-wider text-sm">Q3 2027</span>
+                            <h3 class="text-2xl font-bold text-slate-800">Phase 3: The Orchestrator</h3>
+                            <p class="text-slate-600 text-sm mt-2">Scale phase with Multi-Org orchestration, Scenario Modeling Workspace, and a 3rd party Marketplace.</p>
+                        </div>
+                        <div class="absolute left-0 md:left-1/2 w-8 h-8 bg-white border-4 border-indigo-600 rounded-full md:-ml-4 shadow-lg z-10 flex items-center justify-center">
+                            <span class="block w-2 h-2 bg-indigo-600 rounded-full"></span>
+                        </div>
+                        <div class="md:w-5/12 md:pl-8 pl-12">
+                            <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                                <h4 class="font-bold text-xs uppercase text-slate-400 mb-2">Phase 3 Success Metrics</h4>
+                                <div class="space-y-2">
+                                    <div>
+                                        <div class="flex justify-between text-xs font-bold mb-1"><span>Cycle Time Reduction</span> <span>30%</span></div>
+                                        <div class="w-full bg-slate-100 rounded-full h-2"><div class="bg-indigo-600 h-2 rounded-full" style="width: 30%"></div></div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between text-xs font-bold mb-1"><span>Marketplace Growth</span> <span>Expansion</span></div>
+                                        <div class="w-full bg-slate-100 rounded-full h-2"><div class="bg-indigo-400 h-2 rounded-full" style="width: 85%"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: GOVERNANCE & POLICY -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-cyan-500">
+                <h3 class="text-2xl font-bold text-slate-900 mb-4">Governance Architecture</h3>
+                <p class="text-slate-600 text-sm mb-6">ODI uses an "Ontology-First" approach to prevent agent hallucination, aligned with Ide & Talamàs's research on knowledge hierarchies.</p>
+                
+                <!-- Flow Diagram (HTML/CSS) -->
+                <div class="flex flex-col items-center space-y-2">
+                    <div class="w-full flex justify-between items-center bg-slate-50 p-3 rounded border border-slate-200">
+                        <span class="text-xs font-bold text-slate-500 uppercase">Input</span>
+                        <span class="font-semibold text-slate-700">Raw Enterprise Data</span>
+                    </div>
+                    <div class="h-4 w-0.5 bg-slate-300"></div>
+                    <div class="w-full flex justify-between items-center bg-cyan-50 p-3 rounded border border-cyan-200">
+                        <span class="text-xs font-bold text-cyan-600 uppercase">Ontology</span>
+                        <span class="font-semibold text-cyan-800">Controlled Vocabulary</span>
+                    </div>
+                    <div class="h-4 w-0.5 bg-slate-300"></div>
+                    <div class="w-full flex justify-between items-center bg-violet-50 p-3 rounded border border-violet-200">
+                        <span class="text-xs font-bold text-violet-600 uppercase">Agent</span>
+                        <span class="font-semibold text-violet-800">AI Execution</span>
+                    </div>
+                    <div class="h-4 w-0.5 bg-slate-300"></div>
+                    <div class="w-full flex justify-between items-center bg-rose-50 p-3 rounded border border-rose-200">
+                        <span class="text-xs font-bold text-rose-600 uppercase">Audit</span>
+                        <span class="font-semibold text-rose-800">Supervisor Oversight</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-lg">
+                 <h3 class="text-2xl font-bold text-slate-900 mb-6">Projected Metrics Impact</h3>
+                 <p class="text-xs text-slate-500 mb-4">Quantifying success across key phases.</p>
+                 <!-- CHART 3: GROUPED BAR -->
+                 <div class="chart-container">
+                    <canvas id="metricsChart"></canvas>
+                 </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="bg-slate-900 text-slate-400 py-12 text-center rounded-2xl">
+            <h4 class="text-white text-xl font-bold mb-2">ODI Orchestrator</h4>
+            <p class="mb-6 text-sm">The Operating System for the Agentic Age.</p>
+            <div class="flex justify-center gap-4 text-xs uppercase tracking-widest">
+                <span>Auditable</span> &bull; <span>Ontological</span> &bull; <span>Scalable</span>
+            </div>
+            <p class="mt-8 text-xs text-slate-600">Based on PRD (Draft) and Strategic Synthesis 2026</p>
+        </footer>
+
+    </main>
+
+    <!-- CHART.JS LOGIC -->
+    <script>
+        // --- UTILITY: LABEL WRAPPING ---
+        function wrapLabel(label, maxLength) {
+            if (label.length <= maxLength) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if ((currentLine + " " + words[i]).length <= maxLength) {
+                    currentLine += " " + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        // --- UTILITY: TOOLTIP CALLBACK ---
+        const commonTooltipOptions = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            }
+        };
+
+        // --- CHART 1: TRANSFORMATION GAP (DONUT) ---
+        const ctxTransformation = document.getElementById('transformationChart').getContext('2d');
+        new Chart(ctxTransformation, {
+            type: 'doughnut',
+            data: {
+                labels: ['Business Transformation (Process/Culture)', 'Technology Implementation'],
+                datasets: [{
+                    data: [80, 20],
+                    backgroundColor: [
+                        '#4f46e5', // Indigo (Business)
+                        '#06b6d4'  // Cyan (Tech)
+                    ],
+                    borderWidth: 0,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '70%',
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            usePointStyle: true,
+                            font: { family: 'Inter', size: 12 },
+                            color: '#475569'
+                        }
+                    },
+                    tooltip: commonTooltipOptions
+                }
+            }
+        });
+
+        // --- CHART 2: PRODUCTIVITY J-CURVE (LINE) ---
+        const ctxProductivity = document.getElementById('productivityCurveChart').getContext('2d');
+        
+        // Data simulation for J-Curve
+        // Traditional: Dips initially (process confusion), recovers slowly
+        // ODI: Dips less (processes provided), accelerates faster
+        const labelsJCurve = ['Launch', 'Month 3', 'Month 6', 'Month 9', 'Month 12', 'Month 18', 'Month 24'];
+        
+        new Chart(ctxProductivity, {
+            type: 'line',
+            data: {
+                labels: labelsJCurve,
+                datasets: [
+                    {
+                        label: 'ODI Orchestrator (Accelerated)',
+                        data: [100, 110, 130, 160, 200, 280, 350], // Fast rise
+                        borderColor: '#06b6d4', // Cyan
+                        backgroundColor: 'rgba(6, 182, 212, 0.1)',
+                        tension: 0.4,
+                        fill: true,
+                        pointRadius: 4,
+                        pointBackgroundColor: '#fff',
+                        pointBorderColor: '#06b6d4',
+                        borderWidth: 3
+                    },
+                    {
+                        label: 'Traditional Deployment',
+                        data: [100, 90, 85, 95, 110, 140, 180], // The "Dip" (J-Curve)
+                        borderColor: '#f43f5e', // Rose
+                        borderDash: [5, 5],
+                        tension: 0.4,
+                        fill: false,
+                        pointRadius: 3,
+                        pointBackgroundColor: '#f43f5e',
+                        borderWidth: 2
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        grid: { color: '#e2e8f0' },
+                        title: { display: true, text: 'Net ROI / Productivity Index' }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        align: 'end',
+                        labels: { font: { family: 'Inter' } }
+                    },
+                    tooltip: commonTooltipOptions
+                }
+            }
+        });
+
+        // --- CHART 3: METRICS BY PHASE (BAR) ---
+        const ctxMetrics = document.getElementById('metricsChart').getContext('2d');
+        
+        // Wrap labels for bar chart
+        const metricsLabels = ['Lead Qualification', 'Supervision Enabled', 'Cycle Time Reduction'].map(l => wrapLabel(l, 16));
+
+        new Chart(ctxMetrics, {
+            type: 'bar',
+            data: {
+                labels: metricsLabels,
+                datasets: [{
+                    label: 'Target Percentage (%)',
+                    data: [80, 70, 30], // >80%, >70%, 30% reduction
+                    backgroundColor: [
+                        '#4f46e5', // Indigo
+                        '#8b5cf6', // Violet
+                        '#06b6d4'  // Cyan
+                    ],
+                    borderRadius: 6,
+                    barPercentage: 0.6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        grid: { color: '#f1f5f9' }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: commonTooltipOptions
+                }
+            }
+        });
+    </script>
+</body>
+</html>
